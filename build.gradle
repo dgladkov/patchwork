@@ -1,0 +1,23 @@
+group 'io.codebakery.patchwork'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+mainClassName = 'io.codebakery.patchwork.Main'
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
